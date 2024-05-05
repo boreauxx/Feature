@@ -1,7 +1,8 @@
-package feature.service.program;
+package feature.service.program.program;
 
-import feature.entity.bindings.ProgramModel;
-import feature.entity.models.Program;
+import feature.entity.bindings.program.AddProgramModel;
+import feature.entity.bindings.program.ProgramModel;
+import feature.entity.models.program.Program;
 import feature.repository.ProgramRepository;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
@@ -27,27 +28,29 @@ public class ProgramServiceImpl implements ProgramService {
         }
         return mappedPrograms;
     }
-
     @Override
-    public void createProgram() {
-        Program program = new Program("New Program", 90, new ArrayList<>());
+    public ProgramModel getSpecificProgram(Long id){
+        Program program = this.findProgramById(id);
+        return this.mapper.map(program, ProgramModel.class);
+    }
+    @Override
+    public Program findProgramById(Long id) {
+        return this.programRepository.findById(id).orElseThrow(null);
+    }
+    @Override
+    public void createProgram(AddProgramModel addProgramModel) {
+        Program program = this.mapper.map(addProgramModel, Program.class);
+        program.setWeeks(new ArrayList<>());
         this.programRepository.save(program);
     }
-
     @Override
     public void removeProgram(Long id) {
         this.programRepository.deleteById(id);
     }
 
     @Override
-    public Program findById(Long id) {
-        return this.programRepository.findById(id).orElseThrow(null);
-    }
-
-    @Override
     public void saveProgram(Program program) {
         this.programRepository.save(program);
     }
-
 
 }

@@ -5,8 +5,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import feature.entity.enums.UserRole;
-import feature.entity.models.Role;
-import feature.entity.models.User;
+import feature.entity.models.user.Role;
+import feature.entity.models.user.User;
 import feature.repository.RoleRepository;
 import feature.repository.UserRepository;
 

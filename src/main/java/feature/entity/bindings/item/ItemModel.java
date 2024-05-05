@@ -1,10 +1,11 @@
-package feature.entity.bindings;
+package feature.entity.bindings.item;
 
 import lombok.Data;
 
 @Data
-public class AddItemModel {
+public class ItemModel {
 
+    private Long id;
     private String name;
     private Integer fats;
     private Integer carbs;

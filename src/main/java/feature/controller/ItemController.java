@@ -1,8 +1,8 @@
 package feature.controller;
 
-import feature.entity.bindings.AddItemModel;
-import feature.entity.bindings.ItemModel;
-import feature.entity.bindings.RemoveItemModel;
+import feature.entity.bindings.item.AddItemModel;
+import feature.entity.bindings.item.ItemModel;
+import feature.entity.bindings.item.RemoveItemModel;
 import feature.service.item.ItemService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,7 @@
 package feature.repository;
 
-import feature.entity.models.Role;
-import feature.entity.models.User;
+import feature.entity.models.user.Role;
+import feature.entity.models.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

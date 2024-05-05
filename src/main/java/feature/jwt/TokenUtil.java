@@ -1,6 +1,6 @@
 package feature.jwt;
 
-import feature.entity.models.User;
+import feature.entity.models.user.User;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

@@ -1,6 +1,5 @@
-package feature.entity.models;
+package feature.entity.models.user;
 
-import feature.util.BaseEntity;
 import feature.util.BaseEntity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;

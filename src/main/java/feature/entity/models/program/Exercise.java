@@ -1,9 +1,8 @@
-package feature.entity.models;
+package feature.entity.models.program;
 
+import feature.entity.models.program.Program;
 import feature.util.BaseEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,8 +19,12 @@ public class Exercise extends BaseEntity {
 
     private Integer sets;
 
+    private String reps;
+
     private Double kg;
 
-    @ManyToMany(mappedBy = "exercises")
-    private List<Program> programs;
+    @ManyToOne
+    @JoinColumn(name = "day_id")
+    private Day day;
+
 }

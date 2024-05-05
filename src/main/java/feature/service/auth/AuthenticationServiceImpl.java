@@ -1,7 +1,7 @@
 package feature.service.auth;
 
 import feature.entity.enums.UserRole;
-import feature.entity.models.User;
+import feature.entity.models.user.User;
 import feature.exception.DuplicationUserInformationException;
 import feature.jwt.TokenUtil;
 import feature.jwt.payload.AuthenticationRequest;
@@ -22,8 +22,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
-
-import static feature.jwt.SecurityConstants.TOKEN_PREFIX;
 
 @Service
 @RequiredArgsConstructor

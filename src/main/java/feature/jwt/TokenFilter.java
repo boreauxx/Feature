@@ -1,6 +1,6 @@
 package feature.jwt;
 
-import feature.entity.models.User;
+import feature.entity.models.user.User;
 import feature.service.user.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

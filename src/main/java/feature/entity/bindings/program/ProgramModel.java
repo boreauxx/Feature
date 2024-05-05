@@ -1,4 +1,4 @@
-package feature.entity.bindings;
+package feature.entity.bindings.program;
 
 import lombok.Data;
 
@@ -11,8 +11,6 @@ public class ProgramModel {
 
     private String name;
 
-    private Integer days;
-
-    private List<ExerciseModel> exercises;
+    private List<WeekModel> weeks;
 
 }

@@ -1,8 +1,8 @@
 package feature.service.item;
 
-import feature.entity.bindings.AddItemModel;
-import feature.entity.bindings.ItemModel;
-import feature.entity.bindings.RemoveItemModel;
+import feature.entity.bindings.item.AddItemModel;
+import feature.entity.bindings.item.ItemModel;
+import feature.entity.bindings.item.RemoveItemModel;
 
 import java.util.List;
 

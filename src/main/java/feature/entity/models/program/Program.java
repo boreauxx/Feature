@@ -1,6 +1,5 @@
-package feature.entity.models;
+package feature.entity.models.program;
 
-import feature.entity.enums.UserRole;
 import feature.util.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,13 +10,13 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Table(name = "roles")
+@Table(name = "programs")
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor
-public class Role extends BaseEntity {
+public class Program extends BaseEntity {
 
-    @Enumerated(EnumType.STRING)
-    private UserRole name;
+    private String name;
 
-    @OneToMany(mappedBy = "role")
-    private List<User> users;
+    @OneToMany(mappedBy = "program", cascade = CascadeType.REMOVE, orphanRemoval = true)
+    private List<Week> weeks;
+
 }

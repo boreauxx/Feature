@@ -1,6 +1,6 @@
 package feature.service.user;
 
-import feature.entity.models.User;
+import feature.entity.models.user.User;
 import feature.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetailsService;

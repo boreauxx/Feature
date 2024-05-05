@@ -1,4 +1,4 @@
-package feature.entity.bindings;
+package feature.entity.bindings.program;
 
 import lombok.Data;
 
@@ -12,4 +12,6 @@ public class ExerciseModel {
     private Double kg;
 
     private Integer sets;
+
+    private String reps;
 }

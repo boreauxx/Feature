@@ -1,4 +1,4 @@
-package feature.entity.bindings;
+package feature.entity.bindings.program;
 
 import lombok.Data;
 
@@ -11,5 +11,7 @@ public class AddExerciseModel {
 
     private Integer sets;
 
-    private Long programId;
+    private String reps;
+
+    private String date;
 }

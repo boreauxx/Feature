@@ -1,7 +1,7 @@
 package feature.service.user;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
-import feature.entity.models.User;
+import feature.entity.models.user.User;
 
 public interface UserService {
 
